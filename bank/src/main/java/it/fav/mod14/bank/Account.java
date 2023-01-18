@@ -139,7 +139,8 @@ public class Account {
 				return false;
 			}
 		} else {
-			return false;
+			//I like this one better that way
+			return true;
 		}
 	}
 
