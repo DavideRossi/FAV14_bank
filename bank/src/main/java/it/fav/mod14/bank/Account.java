@@ -122,6 +122,10 @@ public class Account {
 		this.notificationPreference = notificationPreference;
 	}
 
+	public void clear() {
+		this.balance = 0;
+	}
+	
 	public boolean makeTransfer(String destinationAccountCode, double amount, Notificator notificator, RemoteBankOperator remoteBankOperator) {
 		if(getBalance() >= amount) {
 			if(remoteBankOperator.transfer(destinationAccountCode, amount)) {
@@ -141,6 +145,11 @@ public class Account {
 		} else {
 			return false;
 		}
+	}
+	
+	public double setBalance40() {
+		this.balance = 40;
+		return this.balance;
 	}
 
 	@Override
